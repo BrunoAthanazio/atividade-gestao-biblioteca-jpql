@@ -8,4 +8,5 @@ import com.weg.atividade_gestao_biblioteca_jpql.model.Editora;
 @Repository
 public interface EditoraRepository extends JpaRepository<Editora, Long>{
     boolean existsByNome(String nome);
+    Editora findByNome(String nome);
 }

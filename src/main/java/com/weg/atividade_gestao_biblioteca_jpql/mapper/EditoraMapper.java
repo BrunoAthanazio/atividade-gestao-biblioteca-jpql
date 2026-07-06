@@ -9,12 +9,12 @@ import com.weg.atividade_gestao_biblioteca_jpql.model.Editora;
 @Component
 public class EditoraMapper {
 
-    public Editora toEntity(EditoraRequestDto dto){
+    public Editora toEntity(EditoraRequestDto editoraRequestDto){
         return new Editora(
-            dto.nome(),
-            dto.cnpj(),
-            dto.telefone(),
-            dto.email());
+            editoraRequestDto.nome(),
+            editoraRequestDto.cnpj(),
+            editoraRequestDto.telefone(),
+            editoraRequestDto.email());
     }
 
     public EditoraResponseDto toResponse(Editora editora){
